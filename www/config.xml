@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "io.cordova.hello-cordova"
         version   = "2.0.0">
-    <name>Hello Cordova</name>
+    <name>CodeXPhoneGap</name>
 
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
