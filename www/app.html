@@ -6,18 +6,108 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>
         </title>
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.css"
+        <link rel="stylesheet" href="css/jquery.mobile-1.1.1.min.css"
         />
-        <link rel="stylesheet" href="my.css" />
+        <link rel="stylesheet" href="css/my.css" />
         <style>
             /* App custom styles */
         </style>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        <script src="js/jquery.min.js">
         </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.js">
+        <script src="js/jquery.mobile-1.1.1.min.js">
         </script>
-        <script src="my.js">
+        <script src="js/my.js">
         </script>
+		<script type="text/javascript" charset="utf-8" src="js/cordova-2.1.0.js"></script>
+		<script type="text/javascript">			
+
+			var pictureSource;   // picture source
+			var destinationType; // sets the format of returned value 
+
+			// Wait for Cordova to connect with the device
+			//
+			document.addEventListener("deviceready",onDeviceReady,false);
+
+			// Cordova is ready to be used!
+			//
+			function onDeviceReady() {
+				pictureSource=navigator.camera.PictureSourceType;
+				destinationType=navigator.camera.DestinationType;
+			}
+
+			// Called when a photo is successfully retrieved
+			//
+			function onPhotoDataSuccess(imageData) {
+			  // Uncomment to view the base64 encoded image data
+			  // console.log(imageData);
+
+			  // Get image handle
+			  //
+			  var smallImage = document.getElementById('smallImage');
+
+			  // Unhide image elements
+			  //
+			  smallImage.style.display = 'block';
+
+			  // Show the captured photo
+			  // The inline CSS rules are used to resize the image
+			  //
+			  smallImage.src = "data:image/jpeg;base64," + imageData;
+			}
+
+			// Called when a photo is successfully retrieved
+			//
+			function onPhotoURISuccess(imageURI) {
+			  // Uncomment to view the image file URI 
+			  // console.log(imageURI);
+
+			  // Get image handle
+			  //
+			  var largeImage = document.getElementById('largeImage');
+
+			  // Unhide image elements
+			  //
+			  largeImage.style.display = 'block';
+
+			  // Show the captured photo
+			  // The inline CSS rules are used to resize the image
+			  //
+			  largeImage.src = imageURI;
+			}
+
+			// A button will call this function
+			//
+			function capturePhoto() {
+			  // Take picture using device camera and retrieve image as base64-encoded string
+			  navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+				destinationType: destinationType.DATA_URL });
+			}
+
+			// A button will call this function
+			//
+			function capturePhotoEdit() {
+			  // Take picture using device camera, allow edit, and retrieve image as base64-encoded string  
+			  navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
+				destinationType: destinationType.DATA_URL });
+			}
+
+			// A button will call this function
+			//
+			function getPhoto(source) {
+			  // Retrieve image file location from specified source
+			  navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50, 
+				destinationType: destinationType.FILE_URI,
+				sourceType: source });
+			}
+
+			// Called if something bad happens.
+			// 
+			function onFail(message) {
+			  alert('Failed because: ' + message);
+			}
+
+		</script>
+		
     </head>
     
     <body>
@@ -79,8 +169,8 @@
                         </a>
                     </li>
                     <li data-theme="c">
-                        <a href="#page8" data-transition="turn">
-                            Button4
+                        <a href="#pagexz" data-transition="none">
+                            Phote
                         </a>
                     </li>
                 </ul>
@@ -93,13 +183,18 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" data-theme="" data-icon="star">
+                        <a href="#page6" data-theme="" data-icon="star">
                             Two
                         </a>
                     </li>
                     <li>
-                        <a href="#" data-theme="" data-icon="info">
+                        <a href="#page7" data-theme="" data-icon="info">
                             Three
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page8" data-theme="" data-icon="gear">
+                            Four
                         </a>
                     </li>
                 </ul>
@@ -126,13 +221,18 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" data-theme="" data-icon="star">
+                        <a href="#page6" data-theme="" data-icon="star">
                             Two
                         </a>
                     </li>
                     <li>
-                        <a href="#" data-theme="" data-icon="info">
+                        <a href="#page7" data-theme="" data-icon="info">
                             Three
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page8" data-theme="" data-icon="gear">
+                            Four
                         </a>
                     </li>
                 </ul>
@@ -161,18 +261,65 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" data-theme="" data-icon="star">
+                        <a href="#page6" data-theme="" data-icon="star">
                             Two
                         </a>
                     </li>
                     <li>
-                        <a href="#" data-theme="" data-icon="info">
+                        <a href="#page7" data-theme="" data-icon="info">
                             Three
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page8" data-theme="" data-icon="gear">
+                            Four
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
+		
+		
+		<!-- page xz -->
+		
+		 <div data-role="page" id="pagexz">
+            <div data-role="content">
+				<button onclick="capturePhoto();">Capture Photo</button> <br>
+				<button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
+				<button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+				<button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
+				<img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+				<img style="display:none;" id="largeImage" src="" />
+            </div>
+            <div data-role="tabbar" data-iconpos="top" data-theme="a">
+                <ul>
+                    <li>
+                        <a href="#page1" data-theme="" data-icon="home" class="ui-btn-active ui-state-persist">
+                            One
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page6" data-theme="" data-icon="star">
+                            Two
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page7" data-theme="" data-icon="info">
+                            Three
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page8" data-theme="" data-icon="gear">
+                            Four
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+		
+		<!--  /  page xz -->
+		
+		
         <!-- page3 -->
         <div data-role="page" id="page7">
             <div data-role="content">
@@ -236,13 +383,18 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" data-theme="" data-icon="star">
+                        <a href="#page6" data-theme="" data-icon="star">
                             Two
                         </a>
                     </li>
                     <li>
-                        <a href="#" data-theme="" data-icon="info">
+                        <a href="#page7" data-theme="" data-icon="info">
                             Three
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page8" data-theme="" data-icon="gear">
+                            Four
                         </a>
                     </li>
                 </ul>
@@ -306,13 +458,18 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" data-theme="" data-icon="star">
+                        <a href="#page6" data-theme="" data-icon="star">
                             Two
                         </a>
                     </li>
                     <li>
-                        <a href="#" data-theme="" data-icon="info">
+                        <a href="#page7" data-theme="" data-icon="info">
                             Three
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page8" data-theme="" data-icon="gear">
+                            Four
                         </a>
                     </li>
                 </ul>
@@ -324,3 +481,120 @@
     </body>
 
 </html>
+
+<!--
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name = "format-detection" content = "telephone=no"/>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width;" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+		<title>Hello CodeX</title>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="app1">
+            <h1>CodeX</h1>
+            <div id="deviceready">
+                <p class="status pending blink">
+				
+					<div id="container" style="min-width: 300px; height: 300px; margin: 0 auto">
+					</div>
+				
+				</p>
+                <p class="status complete blink hide">
+					Device is Ready, Yo! Bro!
+				</p>
+            </div>
+        </div>
+				
+		<script type="text/javascript" src="js/highcharts.js"></script>
+		<script type="text/javascript" src="js/modules/exporting.js"></script>
+		<script type="text/javascript" src="cordova-2.0.0.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				var chart;
+				$(document).ready(function() {
+					chart = new Highcharts.Chart({
+						chart: {
+							renderTo: 'container',
+							plotBackgroundColor: null,
+							plotBorderWidth: null,
+							plotShadow: false
+						},
+						title: {
+							text: 'Pie chart'
+						},
+						tooltip: {
+							pointFormat: '{series.name}: <b>{point.percentage}%</b>',
+							percentageDecimals: 1
+						},
+						plotOptions: {
+							pie: {
+								allowPointSelect: true,
+								cursor: 'pointer',
+								dataLabels: {
+									enabled: true,
+									color: '#000000',
+									connectorColor: '#000000',
+									formatter: function() {
+										return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
+									}
+								}
+							}
+						},
+						series: [{
+							type: 'pie',
+							name: 'Browser share',
+							data: [
+								['Firefox',   45.0],
+								['IE',       26.8],
+								{
+									name: 'Chrome',
+									y: 12.8,
+									sliced: true,
+									selected: true
+								},
+								['Safari',    8.5],
+								['Opera',     6.2],
+								['Others',   0.7]
+							]
+						}]
+					});
+				});
+				
+			});
+		</script>
+	</body>
+</html>
+-->
+
+<!--
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name = "format-detection" content = "telephone=no"/>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width;" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Hello CodeX</title>
+    </head>
+    <body>
+        <div class="app">
+            <h1>CodeX</h1>
+            <div id="deviceready">
+                <p class="status pending blink">Connecting to Device</p>
+                <p class="status complete blink hide">
+					Device is Ready, Yo! Bro!
+				</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova-2.0.0.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
+-->
