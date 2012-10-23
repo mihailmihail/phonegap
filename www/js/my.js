@@ -27,6 +27,10 @@
     return $(e.target).find(":jqmData(role='tabbar')").tabbar();
   });
   
+  $(document).bind( "mobileinit", function(event) {
+    $.extend($.mobile.zoom, {locked:true,enabled:false});
+ });
+  
   $(":jqmData(role='page')").live('pageshow', function(e) {
     // Grab the id of the page that's showing, and select it on the Tab Bar on the page
     var tabBar, id = $(e.target).attr('id');
@@ -271,5 +275,7 @@ function closestEnabledButton( element ) {
     return element;
 }
 
+
+//photo
 	
 })(jQuery);
