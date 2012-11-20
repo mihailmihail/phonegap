@@ -2,514 +2,817 @@
 <html>
     
     <head>
-        <meta charset="utf-8">        
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scaleable=no">
-        <title>
-        </title>
-        <link rel="stylesheet" href="css/jquery.mobile-1.1.1.min.css"
-        />
-        <link rel="stylesheet" href="css/my.css" />
-        <style>
-            /* App custom styles */
-        </style>
-        <script src="js/jquery.min.js">
-        </script>
-        <script src="js/jquery.mobile-1.1.1.min.js">
-        </script>
-        <script src="js/my.js">
-        </script>
-		<script type="text/javascript" charset="utf-8" src="js/cordova-2.1.0.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>	
+        <link rel="stylesheet" type="text/css" href="jquery.mobile-1.1.1.min.css" />
+        <link rel="stylesheet" type="text/css" href="my.css" />
+		<script type="text/javascript" src="spin.min.js"></script>
+		<script type="text/javascript" src="spin.body.js"></script>
+		<script type="text/javascript" src="jquery.min.js"></script>
+        <script type="text/javascript" src="jquery.mobile-1.1.1.min.js"></script>
+        <script type="text/javascript" src="my.js"></script>		
+		<link rel="stylesheet" type="text/css" href="style.css" />
 		
+		<!-- JQuery MaxImage plugin -->
+		<link rel="stylesheet" href="jquery.maximage.css" type="text/css" media="screen" title="CSS" charset="utf-8" />
+		<script src="jquery.cycle.all.js" type="text/javascript"></script>
+		<script src="jquery.easing.1.3.js" type="text/javascript"></script>
+		<script src="jquery.maximage.min.js" type="text/javascript"></script>		
     </head>
     
     <body>
-        <!-- Home -->
-        <div data-role="page" id="page1">
-            <div data-theme="a" data-role="header">
-                <a data-role="button" href="#page1" data-icon="arrow-l" data-iconpos="left"
-                class="ui-btn-left">
-                    Button
-                </a>
-                <h2>
-                    xz
-                </h2>
-                <a data-role="button" data-inline="true" data-transition="none" data-theme="a"
-                href="#page1" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">
-                    Button
-                </a>
-            </div>
-            <div data-role="content">
-                <div data-role="collapsible-set" data-theme="a" data-content-theme="b">
-                    <div data-role="collapsible" data-collapsed="true">
-                        <h3>
-                            Section Header
-                        </h3>
-                    </div>
-                    <div data-role="collapsible">
-                        <h3>
-                            Section Header
-                        </h3>
-                    </div>
-                    <div data-role="collapsible">
-                        <h3>
-                            Section Header
-                        </h3>
-                    </div>
-                    <div data-role="collapsible">
-                        <h3>
-                            Section Header
-                        </h3>
-                    </div>
-                </div>
-                <ul data-role="listview" data-divider-theme="b" data-inset="true">
-                    <li data-role="list-divider" role="heading">
-                        Pages
-                    </li>
-                    <li data-theme="c">
-                        <a href="#page5" data-transition="none">
-                            Button1
-                        </a>
-                    </li>
-                    <li data-theme="c">
-                        <a href="#page6" data-transition="none">
-                            Button2
-                        </a>
-                    </li>
-                    <li data-theme="c">
-                        <a href="#page7" data-transition="none">
-                            Button3
-                        </a>
-                    </li>
-                    <li data-theme="c">
-                        <a href="#pagexz" data-transition="none">
-                            Phote
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div data-role="tabbar" data-iconpos="top" data-theme="a">
-                <ul>
-                    <li>
-                        <a href="#page1" data-theme="" data-icon="home" class="ui-btn-active ui-state-persist">
-                            One
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#page6" data-theme="" data-icon="star">
-                            Two
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#page7" data-theme="" data-icon="info">
-                            Three
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#page8" data-theme="" data-icon="gear">
-                            Four
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- page1 -->
-        <div data-role="page" id="page5">
-            <div data-role="content">
-                <div data-role="fieldcontain">
-                    <fieldset data-role="controlgroup">
-                        <label for="searchinput1">
-                        </label>
-                        <input name="" id="searchinput1" placeholder="" value="" type="search">
-                    </fieldset>
-                </div>
-                <img src="https://maps.googleapis.com/maps/api/staticmap?center=Madison, WI&amp;zoom=14&amp;size=288x400&amp;markers=Madison, WI&amp;sensor=false"
-                height="400" width="288">
-            </div>
-            <div data-role="tabbar" data-iconpos="top" data-theme="a">
-                <ul>
-                    <li>
-                        <a href="#page1" data-theme="" data-icon="home" class="ui-btn-active ui-state-persist">
-                            One
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#page6" data-theme="" data-icon="star">
-                            Two
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#page7" data-theme="" data-icon="info">
-                            Three
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#page8" data-theme="" data-icon="gear">
-                            Four
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- page2 -->
-        <div data-role="page" id="page6">
-            <div data-role="content">
-                <div style="">
-                    <img style="width: 290px; height: 400px" src="http://assets.codiqa.com/ps/36662/1a505ecf5eb0b7f5LJnFSv5E7N4.jpg">
-                </div>
-                <div data-role="fieldcontain">
-                    <fieldset data-role="controlgroup">
-                        <label for="textinput1">
-                            Title
-                        </label>
-                        <input name="" id="textinput1" placeholder="" value="" type="text">
-                    </fieldset>
-                </div>
-            </div>
-            <div data-role="tabbar" data-iconpos="top" data-theme="a">
-                <ul>
-                    <li>
-                        <a href="#page1" data-theme="" data-icon="home" class="ui-btn-active ui-state-persist">
-                            One
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#page6" data-theme="" data-icon="star">
-                            Two
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#page7" data-theme="" data-icon="info">
-                            Three
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#page8" data-theme="" data-icon="gear">
-                            Four
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-		
-		
-		<!-- page xz -->
-		
-		 <div data-role="page" id="pagexz">
-            <div data-role="content">
-			<!--
-				<button onclick="capturePhoto();">Capture Photo</button> <br>
-				<button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
-				<button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
-				<button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
-				<img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
-				<img style="display:none;" id="largeImage" src="" />
-				
-			-->	
-            </div>
-            <div data-role="tabbar" data-iconpos="top" data-theme="a">
-                <ul>
-                    <li>
-                        <a href="#page1" data-theme="" data-icon="home" class="ui-btn-active ui-state-persist">
-                            One
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#page6" data-theme="" data-icon="star">
-                            Two
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#page7" data-theme="" data-icon="info">
-                            Three
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#page8" data-theme="" data-icon="gear">
-                            Four
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-		
-		<!--  /  page xz -->
-		
-		
-        <!-- page3 -->
-        <div data-role="page" id="page7">
-            <div data-role="content">
-                <div data-role="fieldcontain">
-                    <label for="selectmenu1">
-                        Choose:
-                    </label>
-                    <select name="">
-                        <option value="option1">
-                            Option 1
-                        </option>
-                        <option value="value">
-                            Option
-                        </option>
-                        <option value="value">
-                            Option
-                        </option>
-                        <option value="value">
-                            Option
-                        </option>
-                        <option value="value">
-                            Option
-                        </option>
-                    </select>
-                </div>
-                <div data-role="fieldcontain">
-                    <fieldset data-role="controlgroup">
-                        <label for="textarea1">
-                            Title
-                        </label>
-                        <textarea name="" id="textarea1" placeholder=""></textarea>
-                    </fieldset>
-                </div>
-                <div data-role="fieldcontain">
-                    <fieldset data-role="controlgroup">
-                        <label for="toggleswitch1">
-                            Toggle
-                        </label>
-                        <select name="toggleswitch1" id="toggleswitch1" data-theme="" data-role="slider">
-                            <option value="off">
-                                Off
-                            </option>
-                            <option value="on">
-                                On
-                            </option>
-                        </select>
-                    </fieldset>
-                </div>
-                <div>
-                    <a href="" data-transition="fade">
-                        Link me to click me
-                    </a>
-                </div>
-                <input value="Submit" type="submit">
-            </div>
-            <div data-role="tabbar" data-iconpos="top" data-theme="a">
-                <ul>
-                    <li>
-                        <a href="#page1" data-theme="" data-icon="home" class="ui-btn-active ui-state-persist">
-                            One
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#page6" data-theme="" data-icon="star">
-                            Two
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#page7" data-theme="" data-icon="info">
-                            Three
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#page8" data-theme="" data-icon="gear">
-                            Four
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- page4 -->
-        <div data-role="page" id="page8">
-            <div data-role="content">
-                <div data-role="fieldcontain">
-                    <fieldset data-role="controlgroup">
-                        <label for="slider1">
-                            Value1:
-                        </label>
-                        <input name="slider" value="80" min="0" max="100" data-highlight="false"
-                        type="range">
-                    </fieldset>
-                </div>
-                <div data-role="fieldcontain">
-                    <fieldset data-role="controlgroup">
-                        <label for="slider2">
-                            Value2:
-                        </label>
-                        <input name="slider" value="20" min="0" max="100" data-highlight="false"
-                        type="range">
-                    </fieldset>
-                </div>
-                <div data-role="fieldcontain">
-                    <fieldset data-role="controlgroup">
-                        <label for="slider3">
-                            Value3:
-                        </label>
-                        <input name="slider" value="90" min="0" max="100" data-highlight="false"
-                        type="range">
-                    </fieldset>
-                </div>
-                <div data-role="fieldcontain">
-                    <fieldset data-role="controlgroup">
-                        <label for="slider5">
-                            Value:
-                        </label>
-                        <input name="slider" value="50" min="0" max="100" data-highlight="false"
-                        type="range">
-                    </fieldset>
-                </div>
-                <div data-role="fieldcontain">
-                    <fieldset data-role="controlgroup">
-                        <label for="slider4">
-                            Value4:
-                        </label>
-                        <input name="slider" value="10" min="0" max="100" data-highlight="false"
-                        data-theme="" data-track-theme="" type="range">
-                    </fieldset>
-                </div>
-                <input value="Submit" type="submit">
-            </div>
-            <div data-role="tabbar" data-iconpos="top" data-theme="a">
-                <ul>
-                    <li>
-                        <a href="#page1" data-theme="" data-icon="home" class="ui-btn-active ui-state-persist">
-                            One
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#page6" data-theme="" data-icon="star">
-                            Two
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#page7" data-theme="" data-icon="info">
-                            Three
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#page8" data-theme="" data-icon="gear">
-                            Four
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <script>
-              //App custom javascript
-        </script>
-    </body>
+        <!-- Home_Page_Refrigerator -->
+        <div data-role="page" data-theme="a" id="home_page_refrigerator">
 
-</html>
-
-<!--
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name = "format-detection" content = "telephone=no"/>
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width;" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-		<title>Hello CodeX</title>
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-	</head>
-	<body>
-		<div class="app1">
-            <h1>CodeX</h1>
-            <div id="deviceready">
-                <p class="status pending blink">
-				
-					<div id="container" style="min-width: 300px; height: 300px; margin: 0 auto">
+			<div data-role="header" style="background-color: red !important;"> 
+				<div id="header">
+					<div id="left_header">
+						<div id="right_header">
+							<div>
+								<div class="header_links" id="left"><a class="header_link" href=""><img src="images/povar_ru.png" id="header_povar_ru"/></a></div>
+								<div id="logo"><a href=""><img src="images/logo.png"/ id="imageHeaderLogo"></a></div>
+								<div class="header_links" id="right"><a class="header_link" href=""><img src="images/for_application.png" id="header_for_application"/></a></div>
+							</div>	
+						</div>
 					</div>
-				
-				</p>
-                <p class="status complete blink hide">
-					Device is Ready, Yo! Bro!
-				</p>
+				</div>				
             </div>
-        </div>
-				
-		<script type="text/javascript" src="js/highcharts.js"></script>
-		<script type="text/javascript" src="js/modules/exporting.js"></script>
-		<script type="text/javascript" src="cordova-2.0.0.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-		<script type="text/javascript">
-			$(function () {
-				var chart;
-				$(document).ready(function() {
-					chart = new Highcharts.Chart({
-						chart: {
-							renderTo: 'container',
-							plotBackgroundColor: null,
-							plotBorderWidth: null,
-							plotShadow: false
-						},
-						title: {
-							text: 'Pie chart'
-						},
-						tooltip: {
-							pointFormat: '{series.name}: <b>{point.percentage}%</b>',
-							percentageDecimals: 1
-						},
-						plotOptions: {
-							pie: {
-								allowPointSelect: true,
-								cursor: 'pointer',
-								dataLabels: {
-									enabled: true,
-									color: '#000000',
-									connectorColor: '#000000',
-									formatter: function() {
-										return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
-									}
-								}
-							}
-						},
-						series: [{
-							type: 'pie',
-							name: 'Browser share',
-							data: [
-								['Firefox',   45.0],
-								['IE',       26.8],
-								{
-									name: 'Chrome',
-									y: 12.8,
-									sliced: true,
-									selected: true
-								},
-								['Safari',    8.5],
-								['Opera',     6.2],
-								['Others',   0.7]
-							]
-						}]
-					});
-				});
-				
-			});
-		</script>
-	</body>
-</html>
--->
+            
+			<div data-role="content">
+				<div id="refrigerator">
+					<div id="right_refrigerator">
+						<div id="left_refrigerator">
+							<div data-role="fieldcontain">
+								<fieldset data-role="controlgroup">
+									<label for="searchinput2"></label>
+									<input name="" id="searchinput2" placeholder="" value="" type="search">
+								</fieldset>
+							</div>
+							<div id="rs"></div>
+							<div id="home_menu">
+								<div id="row_one" class="menu_row" >
+									<div class="but">
+										<a href="" title="Switch"  class="menulink menulink51"><img src="images/products.png" id="51" value="Мясо"/></a>
+										<a href="" title="Switch"  class="menulink51 menulink-bottom menulink"><span>Мясо</span></a>
+									</div>
+									<div class="but">
+										<a href="" title="Switch" class="menulink52 menulink"><img src="images/products.png" id="52" value="Рыба и морепродукты"/></a>
+										<a href="" title="Switch" class="menulink52 menulink-bottom menulink"><span>Рыба и море...</span></a>
+									</div>
+									<div class="but">
+										<a href="" title="Switch"  class="menulink53 menulink"><img src="images/products.png" id="53" value="Овощи" /></a>
+										<a href="" title="Switch" class="menulink53 menulink-bottom menulink"><span>Овощи</span></a>
+										
+									</div>
+								</div>
+								<div id="row_two" class="menu_row">
+									<div class="but">
+										<a href="" title="Switch" class="menulink54 menulink"><img src="images/products.png" id="54" value="Птица"/></a>
+										<a href="" title="Switch" class="menulink54 menulink-bottom menulink"><span>Птица</span></a>
+									</div>
+									<div class="but">
+										<a href="" title="Switch" class="menulink136 menulink"><img src="images/products.png" id="136" value="Фрукты"/></a>
+										<a href="" title="Switch" class="menulink136 menulink-bottom menulink"><span>Фрукты</span></a>
+									</div>
+									<div class="but">
+										<a href="" title="Switch" class="menulink menulink227"><img src="images/products.png" id="227" value="Ягоды"/></a>
+										<a href="" title="Switch" class="menulink227 menulink-bottom menulink"><span>Ягоды</span></a>
+									</div>
+								</div>
+								<div id="row_three" class="menu_row">
+									<div class="but">
+										<a href="" title="Switch" class="menulink251 menulink"><img src="images/products.png" id="251" value="Грибы"/></a>
+										<a href="" title="Switch" class="menulink251 menulink-bottom menulink"><span>Грибы</span></a>
+										
+									</div>
+									<div class="but">
+										<a href="" title="Switch" class="menulink266 menulink"><img src="images/products.png" id="266" value="Молочные продукты"/></a>
+										<a href="" title="Switch" class="menulink266 menulink-bottom menulink"><span>Молочные пр...</span></a>
+									</div>
+									<div class="but">
+									<a href="" title="Switch" class="menulink274 menulink"><img src="images/products.png" id="274" value="Орехи"/></a>
+									<a href="" title="Switch" class="menulink274 menulink-bottom menulink"><span>Орехи</span></a>
+								</div>
+								</div>
+								<div id="row_four" class="menu_row">				
+									<div class="but">
+										<a href="" title="Switch" class="menulink275 menulink"><img src="images/products.png" id="275" value="Крупы"/></a>
+										<a href="" title="Switch" class="menulink275 menulink-bottom menulink"><span>Крупы</span></a>
+									</div>
+									<div class="but">
+										<a href="" title="Switch" class="menulink menulink277"><img src="images/products.png" id="277" value="Мука и тесто"/></a>
+										<a href="" title="Switch" class="menulink277 menulink-bottom menulink"><span>Мука и тесто</span></a>
+									</div>
+									<div class="but">
+										<a href="" title="Switch" class="menulink281 menulink"><img src="images/products.png" id="281" value="Макароны"/></a>
+										<a href="" title="Switch" class="menulink281 menulink-bottom menulink"><span>Макароны</span></a>
+									</div>
+								</div>
+								<div id="row_five" class="menu_row">	
+									<div class="but">
+										<a href="" title="Switch" class="menulink294 menulink"><img src="images/products.png" id="294" value="Какао и шоколад"/></a>
+										<a href="" title="Switch" class="menulink294 menulink-bottom menulink"><span>Какао и шок...</span></a>
+									</div>
+									<div class="but">
+										<a href="" title="Switch" class="menulink491 menulink"><img src="images/products.png" id="491" value="Кокосовое молоко"/></a>
+										<a href="" title="Switch" class="menulink491 menulink-bottom menulink"><span>Кокосовое молоко</span></a>
+									</div>
+								</div>				
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
 
-<!--
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name = "format-detection" content = "telephone=no"/>
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width;" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello CodeX</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>CodeX</h1>
-            <div id="deviceready">
-                <p class="status pending blink">Connecting to Device</p>
-                <p class="status complete blink hide">
-					Device is Ready, Yo! Bro!
-				</p>
-            </div>
+			<div data-role="footer">
+				<div id="center_panel_buttons">
+					<div id="right_panel_buttons">
+						<div id="left_panel_buttons">
+							<div id="panel_buttons">
+								<div id="button_cancel" style="float:left; width: 32%; font-size: 12px;">	
+									<button type="submit" name="submit" value="submit-value" id="cancelButton" style="font-size:12px;">X ОТМЕНИТЬ</button>																				
+								</div>
+								<div id="button_ok" style="float:left; width: 65%; margin-left: 3%;">	
+									<button type="submit" name="submit" value="submit-value" id="OkButton">OK</button>												
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- SelectedIngredientsPage -->
+	<div data-role="page" data-theme="a" id="SelectedIngredientsPage">
+		<div data-role="header" style="background-color: red !important;">                
+			<div id="header">
+				<div id="left_header">
+					<div id="right_header">
+						<div>
+							<div class="header_links" id="left"><a class="header_link" href=""><img src="images/povar_ru.png" id="header_povar_ru"/></a></div>
+							<div id="logo"><a href=""><img src="images/logo.png"/></a></div>
+							<div class="header_links" id="right"><a class="header_link" href=""><img src="images/for_application.png" id="header_for_application"/></a></div>
+						</div>	
+					</div>
+				</div>
+			</div>        
         </div>
-        <script type="text/javascript" src="cordova-2.0.0.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
+        <div data-role="content">
+			<div id="background_center">
+				<div id="right_background">
+					<div id="left_background">
+						<div id = "you_choose"><span>Вы выбрали:</span></div>
+						<ul id="selectedIngredientsListView" data-role="listview" data-divider-theme="b" data-inset="true">							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>		
+		<div data-role="footer">
+			<div id="center_panel_buttons">
+				<div id="right_panel_buttons">
+					<div id="left_panel_buttons">
+						<div id="panel_buttons">
+							<div id="more_ingredients_button" style="float:left; width: 32%; font-size: 12px;"> 
+								<button type="submit" name="submit" value="submit-value" id="addMoreIngredientsButton" style="font-size:12px;">+ ПОПОЛНИТЬ</button>                    
+							</div>
+							<div id="search_by_ingredients_button" style="float:left; width: 65%; margin-left: 3%;"> 
+								<button type="submit" name="submit" value="submit-value" id="searchByIngredientsButton">НАЧАТЬ ПОИСК</button>            
+							</div>
+						</div>
+					</div>  
+				</div>
+			</div>
+		</div>
+	</div>
+ 
+	<!-- RecipesListByIngredients -->
+	<div data-role="page" data-theme="a" id="RecipesListByIngredients">
+		<div data-role="header" style="background-color: red !important;">
+            <div id="header">
+				<div id="left_header">
+					<div id="right_header">
+						<div>
+							<div class="header_links" id="left"><a class="header_link" href=""><img src="images/povar_ru.png" id="header_povar_ru"/></a></div>
+							<div id="logo"><a href=""><img src="images/logo.png"/></a></div>
+							<div class="header_links" id="right"><a class="header_link" href=""><img src="images/for_application.png" id="header_for_application"/></a></div>
+						</div>	
+					</div>
+				</div>
+			</div>
+        </div>
+		<div data-role="content">
+			<div id="background_center">
+				<div id="right_background">
+					<div id="left_background">
+						<div id="main_content">
+							<div id="recipesCountLabel">
+							
+							</div>
+							<ul id="recipesByIngredientsListView" data-divider-theme="b" data-inset="true">
+							
+							</ul>
+						</div>
+					</div>
+				</div>	
+			</div>		
+		</div>
+		<div data-role="footer">
+			<div id="center_panel_buttons">
+				<div id="right_panel_buttons">
+					<div id="left_panel_buttons">
+						<div id="panel_buttons">
+							<div id="return_selected_ingredients" style="float:left; width: 100%; font-size: 12px;"> 
+								<button type="submit" name="submit" value="submit-value" id="returnToSelectedIngredientsListButton" style="font-size:12px;">< ВЕРНУТЬСЯ К ВЫБОРУ</button>                     
+							</div>
+						</div>
+					</div>  
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- SubIngredientList -->
+	<div data-role="page" data-theme="a" id="SubIngredientPage">
+		<div data-role="header" style="background-color: red !important;">
+            <div id="header">
+				<div id="left_header">
+					<div id="right_header">
+						<div>
+							<div class="header_links" id="left"><a class="header_link" href=""><img src="images/povar_ru.png" id="header_povar_ru"/></a></div>
+							<div id="logo"><a href=""><img src="images/logo.png"/></a></div>
+							<div class="header_links" id="right"><a class="header_link" href=""><img src="images/for_application.png" id="header_for_application"/></a></div>
+						</div>	
+					</div>
+				</div>
+			</div>
+        </div>
+		<div data-role="content">
+			<div id="background_center">
+				<div id="right_background">
+					<div id="left_background">
+						<div id="main_content">
+							<div id = "general_name_ingredients"><span>Рыба и морепродукты</span></div>
+							<ul data-role="listview" data-divider-theme="b" data-inset="true" id="subTagsListView"> 
+							
+							</ul>
+						</div>	
+					</div>			
+				</div>
+			</div>		
+		</div>
+		<div data-role="footer">
+			<div id="center_panel_buttons">
+				<div id="right_panel_buttons">
+					<div id="left_panel_buttons">
+						<div id="panel_buttons">
+							<div id="button_cancel" style="float:left; width: 32%; font-size: 12px;">	
+								<button type="submit" name="submit" value="submit-value" id="cancelAndReturnButton" style="font-size:12px;"><  ОТМЕНИТЬ И ВЕРНУТЬСЯ</button>																				
+							</div>
+							<div id="button_ok" style="float:left; width: 65%; margin-left: 3%;">	
+								<button type="submit" name="submit" value="submit-value" id="okSubIngredientButton">OK</button> 												
+							</div>
+						</div>
+					</div>
+				</div>		
+			</div>
+		</div>
+    </div>
+		
+	<!-- RecipeFullInformation -->
+	<div data-role="page" data-theme="a" id="recipeFullInformation">
+		<div data-role="header" style="background-color: red !important;">
+            <div id="header">
+				<div id="left_header">
+					<div id="right_header">
+						<div>
+							<div class="header_links" id="left"><a class="header_link" href=""><img src="images/povar_ru.png" id="header_povar_ru"/></a></div>
+							<div id="logo"><a href=""><img src="images/logo.png"/></a></div>
+							<div class="header_links" id="right"><a class="header_link" href=""><img src="images/for_application.png" id="header_for_application"/></a></div>
+						</div>	
+					</div>
+				</div>
+			</div>
+        </div>
+		<div data-role="content">
+			<div id="background_center">
+				<div id="right_background">
+					<div id="left_background">
+						<div id="main_content">
+							<div id="top_main_content">
+								<div id="name_recipe">
+									<label id="recipeNameLabel"></label> 
+								</div>
+								<div id="announce_recipe">
+									<label id="recipeAnnounceLabel"></label>
+								</div> 
+								<div id="link_show_photos">
+									<a id="show_photos" href='#'>Посмотреть фото на сайте www.povar.ru<span id="arrow"></span></a>     
+								</div>
+								<div id="bkg_top_bottom"></div>
+							</div>
+							<div id="bottom_main_content">							
+								<div id="rating_time">
+									<div id="time_prepare">
+										<div id="label_name_time" class="label_name">
+											<label>Время приготовления:</label>
+										</div>
+										<div id="label_time" class="label_rating_time"> 
+											<label id="recipePrepareTimeLabel"></label>      
+										</div>
+									</div>
+									<div id="rating_recipe">
+										<div id="label_name_rating" class="label_name">
+											<label>Оценка рецепта:</label>
+										</div>
+										<div id="label_rating" class="label_rating_time"> 
+											<label id="recipeRatingLabel"></label>
+										</div>      
+									</div>
+								</div>
+								<div id="full_descr_repare">
+									<div id="description_repare">Описание приготовления:</div>
+									<div id="full_announce_recipe">
+										<label id="recipeFullAnnounceLabel"></label>
+									</div>
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div data-role="footer">
+			<div id="center_panel_buttons">
+				<div id="right_panel_buttons">
+					<div id="left_panel_buttons">
+						<div id="panel_buttons">
+							<div id="return_recipe_list" style="float:left; width: 32%; font-size: 12px;">	
+								<button type="submit" name="submit" value="submit-value" id="returnToRecipeListButton" style="font-size:12px;">< ВЕРНУТЬСЯ К СПИСКУ</button>																				
+							</div>
+							<div id="new_search" style="float:left; width: 65%; margin-left: 3%;">	
+								<button type="submit" name="submit" value="submit-value" id="newSearchButton">НОВЫЙ ПОИСК</button> 												
+							</div>
+						</div>
+					</div>
+				</div>		
+			</div>
+		</div>             
+	</div>
+
+	<!--Information for Application -->	
+	<div data-role="page" data-theme="a" id="InformationApplication">
+		<div data-role="header" style="background-color: red !important;">
+            <div id="header">
+				<div id="left_header">
+					<div id="right_header">
+						<div>
+							<div class="header_links" id="left"><a class="header_link" href=""><img src="images/povar_ru.png" id="header_povar_ru"/></a></div>
+							<div id="logo"><a href=""><img src="images/logo.png"/></a></div>
+							<div class="header_links" id="right"><a class="header_link" href=""><img src="images/for_application.png" id="header_for_application"/></a></div>
+						</div>	
+					</div>
+				</div>
+			</div>
+        </div>
+		<div data-role="content">
+			<div id="background_center">
+				<div id="right_background">
+					<div id="left_background">
+						<div id="top_content">
+							<div id="about_application"></div>
+						</div>
+						<div id="bottom_content">
+							<span class="description">
+								Попробуем приготовить салат Цезарь с курицей и сухариками - это популярный салат американской кухни, который заслуженно стал коронным блюдом и у нас в России.
+							</span>	
+							<span class="description">
+								Попробуем приготовить салат Цезарь с курицей и сухариками - это популярный салат американской кухни, который заслуженно стал коронным блюдом и у нас в России.
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer">
+			<div id="center_panel_buttons">
+				<div id="right_panel_buttons">
+					<div id="left_panel_buttons">
+						<div id="panel_buttons">
+							<div id="close_return" style="float:left; width: 100%; font-size: 12px;"> 
+								<button type="submit" name="submit" value="submit-value" id="closeAndReturn" style="font-size:12px;">X ЗАКРЫТЬ И ВЕРНУТЬСЯ</button>                     
+							</div>
+						</div>
+					</div>  
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+    <script>													  	  			
+		
+	<!-- Global variables(Begin) -->
+		var idsAndNames = new Array();
+		var idsAndNamesSubTags = new Array();
+		var ids = new Array();			
+	<!-- Global variables(End) -->						 			
+			
+	<!-- Click Handlers on the main page for menulink(Begin) -->			
+	$(function() {					
+			$('.but').live('click', function(e){
+				e.preventDefault();
+				var a = $(this).find('img').attr('id');
+				if ($('#'+a).attr('src') =='images/products.png'){
+					$(".menulink"+a).addClass("active");
+					$("#"+a).attr('src',"images/products_active.png");					
+							
+					idsAndNames.push({id: $("#"+a).attr('id'), name: $("#"+a).attr('value')});					
+					console.log(idsAndNames);																				
+				}else if($('#'+a).attr('src') =='images/products_active.png'){
+					$(".menulink"+a).removeClass("active");
+					$("#"+a).attr('src',"images/products.png");			
+							
+					var removeValue = $("#"+a).attr('id');					
+					for (i=0;i<idsAndNames.length;i++)
+						if (idsAndNames[i].id == removeValue)
+							idsAndNames.splice(i,1);								
+					console.log(idsAndNames);										
+				}
+				return false;	
+			});
+	});		
+	<!-- Click Handlers on the main page for menulink(End) -->
+			
+	<!-- Page events(Begin) -->
+	$('#RecipesListByIngredients').live('pagebeforeshow',function(event, ui){				
+		idsAndNames = JSON.parse(localStorage.getItem('idsAndNames'));
+		var idsArrayList = new Array();
+		var i;
+								
+		for(i=0; i<idsAndNames.length; i++){
+			idsArrayList.push(idsAndNames[i].id);
+		}	
+
+		$("#recipesCountLabel").empty();			
+		$("#recipesByIngredientsListView").empty();
+		//$.mobile.loadingMessage = "this msg set on live pageshow from mypageone...";
+		//$.mobile.showPageLoadingMsg();		
+		$('body').addClass('ui-loading');
+		/*$.mobile.loading( 'show', {
+			text: 'foo',
+			textVisible: true,
+			theme: 'z',
+			html: ""
+		});*/		
+		//$('.ui-loader h1').text('my custom loading msg..');
+		//$.mobile.loadingMessageTextVisible = true;
+		//$.mobile.showPageLoadingMsg("a", "Loading New Chatom", true);
+		searchByIds(idsArrayList);					
+	});
+			  
+	$('#recipeFullInformation').live('pagebeforeshow',function(event, ui){
+		$('#recipeNameLabel').empty();
+		$('#recipeAnnounceLabel').empty();
+		$('#recipePrepareTimeLabel').empty();
+		$('#recipeRatingLabel').empty();
+		$('#recipeFullAnnounceLabel').empty();
+		$('body').addClass('ui-loading');	
+		searchById(localStorage.getItem('id'));
+	});
+			
+	$("#home_page_refrigerator").live('pageinit', function() {
+        localStorage.clear();
+    });
+			
+	$('#home_page_refrigerator').live('pagebeforeshow',function(event, ui){
+				
+		var allMainTagsId = ['51','52','53','54','136','227','251','266','274','275','277','281','294','491'];
+		idsAndNames = JSON.parse(localStorage.getItem('idsAndNames'));				
+				
+		console.log(idsAndNames);
+				
+		if(idsAndNames == null){
+			idsAndNames = new Array();
+		}				
+													
+		console.log("allMainTagsId " + allMainTagsId);
+				
+		var i;
+		var j;
+		var m = 0;
+		for(i=0; i<allMainTagsId.length; i++){
+			for (j=0;j<idsAndNames.length;j++){
+				if (idsAndNames[j].id == allMainTagsId[i]){
+					m = 1;
+					break;
+				}						
+			}
+			if(m == 1){
+				m = 0;
+			initMainIngredientsPictures2(allMainTagsId[i], 2);
+			}else{
+				initMainIngredientsPictures2(allMainTagsId[i], 1);							
+			}
+		}														
+	}); 
+			
+	$('#SelectedIngredientsPage').live('pagebeforeshow',function(event, ui){
+		event.preventDefault();
+		idsAndNames = JSON.parse(localStorage.getItem('idsAndNames'));
+		console.log("SelectedIngredientsPage", idsAndNames);
+		$("#selectedIngredientsListView").empty();
+		showAllSelectedIngredients(idsAndNames);
+		return false;	
+	});
+			
+	$(document).on('pageshow','#SubIngredientPage', function() {				
+		$('#subTagsListView').empty();
+		$('body').addClass('ui-loading');
+		searchSubTags(localStorage.getItem('idForSubTags'));
+	});
+			
+	$(document).on("pageinit","#SubIngredientPage",function(){
+		$('.but').bind('taphold', function(e){
+		
+		});
+	});			
+	<!-- Page events(End) -->
+			
+	<!-- Button Handlers(Begin) -->
+	$('#OkButton').live('click', function(e){
+		e.preventDefault();
+		localStorage.idsList=ids;									
+		localStorage.setItem('idsAndNames', JSON.stringify(idsAndNames));					
+		$.mobile.changePage( $("#SelectedIngredientsPage"), "slide", true, true);																									
+		return false;
+	});
+	
+	$('#header_for_application').live('click', function(e){
+		$.mobile.changePage( $("#InformationApplication"), "slide", true, true);
+	});
+	
+	$('#closeAndReturn').live('click', function(e){
+		$.mobile.changePage( $('#home_page_refrigerator'), "slide", true, true);
+	});
+			  
+	$('#more_ingredients_button').live('click', function(e){				
+		localStorage.setItem('idsAndNames', JSON.stringify(idsAndNames));												
+		$.mobile.changePage( $("#home_page_refrigerator"), "slide", true, true);																										
+	});	
+
+	$('#okSubIngredientButton').live('click', function(e){
+		var i;
+		for(i=0; i<idsAndNamesSubTags.length; i++){
+			idsAndNames.push(idsAndNamesSubTags[i]);
+		}
+		localStorage.setItem('idsAndNames', JSON.stringify(idsAndNames));
+		console.log("okSubIngredientButton", idsAndNames);
+		$.mobile.changePage($("#SelectedIngredientsPage"), "slide", true, true);				
+	});
+
+	$('#searchByIngredientsButton').live('click', function(e){				
+		localStorage.setItem('idsAndNames', JSON.stringify(idsAndNames));			
+		$.mobile.changePage( $("#RecipesListByIngredients"), "slide", true, true);																										
+	});		
+
+	$('#returnToRecipeListButton').live('click', function(e){												
+		$.mobile.changePage( $("#RecipesListByIngredients"), "slide", true, true);																										
+	});
+
+	$('#newSearchButton').live('click', function(e){
+		idsAndNames = new Array();
+		localStorage.setItem('idsAndNames', JSON.stringify(idsAndNames));				
+		$.mobile.changePage($("#home_page_refrigerator"), { reloadPage : true });
+	});
+
+	$('#returnToSelectedIngredientsListButton').live('click', function(e){												
+		$.mobile.changePage( $("#home_page_refrigerator"), "slide", true, true);																										
+	});	
+
+	$('#cancelAndReturnButton').live('click', function(e){
+		idsAndNamesSubTags = new Array();
+		$.mobile.changePage($("#home_page_refrigerator"), "slide", true, true);				
+	});
+
+	$('#cancelButton').live('click', function(e){				
+		localStorage.idsList=ids;									
+		$.mobile.changePage( $("#home_page_refrigerator"), "slide", true, true);																						
+	});	
+	<!-- Button Handlers(End) -->									
+			
+			
+	<!-- TapHold Handlers(Begin) -->
+	$(function() {					
+		$('.but').bind('taphold', function(e){						
+			var a = $(this).find('img').attr('id');
+			console.log(a);						
+			localStorage.setItem('idForSubTags', a);
+			$.mobile.changePage($("#SubIngredientPage"), "slide", true, true);
+		});
+	});
+	<!-- TapHold Handlers(End) -->							 							
+			  
+	$('.ui-input-search').live('click tap', function(e){			
+		if (!$('#searchinput2').val()==''){									
+			var word = $("#searchinput2").val();					
+			localStorage.searchWord=word;					
+			$.mobile.changePage( $("#page2"), "slide", true, true);
+		}
+	});
+
+	<!-- Functions(Begin) -->	
+	function searchByIds(ids){	
+		var ids2 = ids;
+		var url2 = '{"ids":[';								
+			
+		var m;
+		for (m = 0; m < ids2.length; ++m) {
+			url2 += '"';
+			url2 += ids2[m];
+			url2 += '"';
+			if(m != ids2.length-1){
+				url2 += ',';			
+			}	
+		}					
+		url2 +=']}';
+		console.log(url2);	
+			
+		$.ajax({
+			//beforeSend: function() { $.mobile.showPageLoadingMsg(); }, //Show spinner
+            //complete: function() { $.mobile.hidePageLoadingMsg() }, //Hide spinner
+			url: 'http://tomcat/cp/recipe/all/' + url2,							
+			dataType: 'jsonp',
+			jsonp: 'jsoncallback',
+			timeout: 5000,
+			success: function(data, status){
+				console.log(data);
+				var i = 0;	
+				var items = new Array();				
+				$('#recipesCountLabel').append("<div id='block_number_recipes'><span id='find_recipes'>Найдено рецептов</span><div id='number_of_recipes'><span id='number'>" + data.length + "</span></div></div>");																
+				$.each(data, function(i,item){
+					items[i] = item; i++;																
+					$('#recipesByIngredientsListView').append("<li class='recipes' id='recipe-1'><div class='recipes-block' id='recipe-block-1'><span class='number'>" + i + "</span><span class='name_recipe'>" + item.name + "</span><span class='description'>" + item.announce + "</span><a class='go_to_the_recipe' href='#recipeFullInformation' onclick=showFullInformationAboutRecipe('"+item.id+"')></a></div></li>");																											
+				});
+				//$.mobile.hidePageLoadingMsg();
+				$('body').removeClass('ui-loading');
+				//$.mobile.loading('hide');		
+			},			            
+			error: function(){		
+				alert("error");
+				$('body').removeClass('ui-loading');	
+			}
+			});
+		};	
+		
+	function showFullInformationAboutRecipe(id){
+		localStorage.setItem('id', id);
+		$.mobile.changePage( $("#recipeFullInformation"), "slide", true, true);																													
+	}
+		
+	function searchById(id){		
+		$.ajax({
+			url: 'http://tomcat/cp/recipe/one/'+id,				
+			dataType: 'jsonp',
+			jsonp: 'jsoncallback',
+			timeout: 5000,
+			success: function(data, status){
+				$('#recipeNameLabel').append("<label>" + data.name + "</label>");
+				$('#recipeAnnounceLabel').append("<label>" + data.announce + "</label>");					
+				$('#recipePrepareTimeLabel').append("<label>" + data.prepareTime + " минут</label>");
+				$('#recipeRatingLabel').append("<label>" + data.rating + "/5</label>");
+				$('#recipeFullAnnounceLabel').append("<label>" + data.fullAnnounce + "</label>");				
+				$('body').removeClass('ui-loading');
+			},
+			error: function(){		
+				alert("error");
+				$('body').removeClass('ui-loading');	
+			}
+		});						
+	};
+		
+	function deleteIngredientFromArrayList(id){				
+			for (i=0;i<idsAndNames.length;i++)
+				if (idsAndNames[i].id == id)
+					idsAndNames.splice(i,1);
+			for (i=0;i<ids.length;i++)
+				if (ids[i] == id)
+					ids.splice(i,1);		
+			console.log(idsAndNames);
+			$("#selectedIngredientsListView").empty();
+			showAllSelectedIngredients(idsAndNames);
+				
+			localStorage.setItem('idsAndNames', JSON.stringify(idsAndNames));
+			localStorage.setItem('ids', ids);				
+	};			
+			
+	function addIdToArray(id){																		
+		if($("#sub_ingredient_li-"+id).hasClass("active")){						
+			console.log("unchecked");
+			$("#sub_ingredient_li-"+id).removeClass("active");	
+			$("#sub_ingredient-block_div-"+id).removeClass("active");	
+			$("#sub_ingredient_image-"+id).attr('src',"images/sign_element_not_change_sub_ingredient.png");
+			var removeValue2 = $("#" + id).attr('id');					
+			for (i=0;i<idsAndNames.length;i++)
+				if (idsAndNames[i].id == removeValue2)
+					idsAndNames.splice(i,1);
+			console.log(idsAndNames);
+						
+		}else{
+			console.log("checked");
+			$("#sub_ingredient_li-"+id).addClass("active");	
+			$("#sub_ingredient-block_div-"+id).addClass("active");	
+			$("#sub_ingredient_image-"+id).attr('src',"images/sign_element_change_sub_ingredient_new.png");
+			idsAndNames.push({id: $("#" + id).attr('id'), name: $("#" + id).attr('value')});
+			console.log(idsAndNames);						
+		}			
+	};
+		
+	function initMainIngredientsPictures2(id, command){
+			if(command == 1){										
+				$(".menulink"+id).removeClass("active");
+				$("#"+id).attr('src',"images/products.png");							
+			}else{					
+				$(".menulink"+id).addClass("active");
+				$("#"+id).attr('src',"images/products_active.png");											
+			}											 
+	};
+			
+	function searchSubTags(idForSubTags){
+		$.ajax({
+			url: 'http://tomcat/cp/tag/' + idForSubTags,						
+			dataType: 'jsonp',
+			jsonp: 'jsoncallback',
+			timeout: 5000,
+			success: function(data, status){			
+				var i = 0;	
+				var items = new Array();										
+				var j;
+				var m = 0;
+									
+				$.each(data, function(i,item){
+					items[i] = item; i++;					
+					
+					for (j=0;j<idsAndNames.length;j++){
+						if (idsAndNames[j].id == item.id){
+							m = 1;
+						}
+					}
+						
+					if(m == 1){
+						m = 0;																			
+						$('#subTagsListView').append("<li class='sub_ingredient active' id='sub_ingredient_li-" + item.id + "'><div class='sub_ingredient-block active' id='sub_ingredient-block_div- " + item.id + "'><a id=" + item.id + " onclick=addIdToArray('" + item.id +"') value="+ item.name +" class='link_sub_ingredient active' href=''><img id='sub_ingredient_image-" + item.id + "' src='images/sign_element_change_sub_ingredient_new.png'></a><span class='name_sub_ingredient'>" + item.name + "</span></div></li>");																																										
+					}else{						
+						$('#subTagsListView').append("<li class='sub_ingredient' id='sub_ingredient_li-" + item.id +"'><div class='sub_ingredient-block' id='sub_ingredient-block_div-" + item.id + "'><a id=" + item.id + " onclick=addIdToArray('" + item.id +"') value="+ item.name +" class='link_sub_ingredient' href=''><img id='sub_ingredient_image-" + item.id + "' src='images/sign_element_not_change_sub_ingredient.png'></a><span class='name_sub_ingredient'>" + item.name + "</span></div></li>");																																										
+					}							
+						
+				});
+				$('body').removeClass('ui-loading');	
+			},
+			error: function(){		
+				alert("error");
+				$('body').removeClass('ui-loading');	
+			}
+		});
+	};
+		
+	function showAllSelectedIngredients(ingredients){
+		var i = 0;	
+		var items = new Array();
+		idsAndNamesSubTags = new Array();	
+		console.log(ingredients);
+		$.each(ingredients, function(i,item){
+			items[i] = item; i++;																										
+			$('#selectedIngredientsListView').append("<li class='ingredient' id='ingredient-1'><div class='ingredient-block' id='ingredient-block-1'><span class='number'>"+i+"</span>" +"<span class='slash'>/</span><span class='name_ingredient'>" + item.name + "</span><a class='remove_ingredient' href='#SelectedIngredientsPage' onclick=deleteIngredientFromArrayList('"+item.id+"') data-transition='slide'>" + "X" + "</a>" + "</div></li>");																							
+		});	
+	};
+			
+	function fullTextSearch(word){
+		  $.ajax({
+			url: 'http://localhost:8080/solr/select/?q=recipie_name:*' + word + '*&wt=json&json.wrf=?',
+			dataType: 'jsonp',			
+			jsonp: 'json.wrf',
+			timeout: 5000,
+			success: function(data, status) 
+			{			   
+				var i = 0;	
+				var items = new Array();
+				$.each(data.response.docs, function(i,item){
+					items[i] = item; i++;																					
+					console.log(item.recipie_name);
+					$('#xzxzxz').append("<li data-theme='c'><a href='#recipeFullInformation' onclick=setVal('"+i+"') data-transition='slide'>"+item.recipie_name+"</a></li>");																	
+				});
+				localStorage.items = items;		
+			},
+			error: function(xhr, status, errorThrown) 
+			{
+			alert(status + errorThrown);
+			}
+		});    
+	};			  								
+	<!-- Functions(End) -->	 		
+	
         </script>
     </body>
+
 </html>
--->
